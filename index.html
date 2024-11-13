@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Todo List Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script type="module" src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-scene">
+        <div class="background-scene">
+          <div
+            class="iceberg iceberg-back"
+            style="width: 120px; height: 90px; left: 10%; bottom: 30px"
+          ></div>
+          <div
+            class="iceberg iceberg-back"
+            style="width: 150px; height: 110px; right: 15%; bottom: 40px"
+          ></div>
+          <div
+            class="iceberg"
+            style="width: 100px; height: 80px; left: 20%; bottom: 45px"
+          ></div>
+          <div
+            class="iceberg"
+            style="width: 80px; height: 60px; right: 25%; bottom: 50px"
+          ></div>
+          <div
+            class="iceberg"
+            style="width: 60px; height: 45px; left: 40%; bottom: 55px"
+          ></div>
+        </div>
+
+        <div class="snow"></div>
+        <div class="ground"></div>
+
+        <div class="coins-container"></div>
+
+        <div class="box-container">
+          <svg class="question-box" width="32" height="32" viewBox="0 0 32 32">
+            <rect
+              x="4"
+              y="4"
+              width="24"
+              height="24"
+              fill="#ffcc00"
+              stroke="#996633"
+              stroke-width="2"
+            />
+            <text
+              x="16"
+              y="21"
+              text-anchor="middle"
+              fill="#996633"
+              font-size="16"
+            >
+              ?
+            </text>
+          </svg>
+          <div class="box-coin"></div>
+        </div>
+
+        <div class="character">
+          <div class="cube-face cube-front"></div>
+          <div class="cube-face cube-back"></div>
+          <div class="cube-face cube-left"></div>
+          <div class="cube-face cube-right"></div>
+          <div class="cube-face cube-top"></div>
+          <div class="cube-face cube-bottom"></div>
+          <div class="bear-ear left"></div>
+          <div class="bear-ear right"></div>
+          <div class="bear-face">
+            <div class="bear-eye left"></div>
+            <div class="bear-eye right"></div>
+            <div class="bear-nose"></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="todo-list" id="todoList"></ul>
+
+      <form class="todo-form" id="todoForm">
+        <button type="button" class="add-button">Add New Task</button>
+      </form>
+    </div>
+
+    <div class="celebration-overlay">
+      <div class="celebration-content">
+        <div class="celebration-text">CONGRATULATIONS!</div>
+        <div class="fireworks"></div>
+        <div class="restart-text">Click anywhere to restart</div>
+      </div>
+    </div>
+
+    <dialog id="taskDialog" class="task-dialog">
+      <form id="taskDialogForm" class="task-dialog-form">
+        <h2>Add New Task</h2>
+
+        <div class="form-group">
+          <label for="taskTitle">Title *</label>
+          <input
+            type="text"
+            id="taskTitle"
+            name="taskTitle"
+            required
+            placeholder="Enter task title"
+            minlength="3"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="taskDescription">Description *</label>
+          <textarea
+            id="taskDescription"
+            name="taskDescription"
+            rows="3"
+            required
+            placeholder="Enter task description"
+            minlength="5"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="taskDueDate">Due Date *</label>
+          <input type="date" id="taskDueDate" name="taskDueDate" required />
+        </div>
+
+        <div class="dialog-buttons">
+          <button type="submit" class="btn-add">Add Task</button>
+          <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script></script>
+  </body>
+</html>
