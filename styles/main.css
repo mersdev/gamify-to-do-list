@@ -1246,26 +1246,60 @@ h1 {
   }
 
   .todo-item {
-    min-height: 90px;
+    min-height: 80px;
   }
 
   .card-front {
     padding: 12px;
     gap: 8px;
-    min-height: 90px;
+    min-height: 80px;
   }
 
   .todo-content {
-    gap: 6px;
-    min-height: 58px;
+    gap: 4px;
+    min-height: 50px;
   }
 
   .todo-text {
     font-size: 14px;
+    line-height: 1.2;
+    padding-top: 0;
   }
 
   .todo-description {
     font-size: 12px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-date {
+    display: none;
+  }
+
+  .todo-item {
+    min-height: 70px;
+  }
+
+  .card-front {
+    min-height: 70px;
+  }
+
+  .todo-content {
+    min-height: 40px;
+  }
+
+  .todo-text {
+    font-size: 13px;
+  }
+
+  .todo-description {
+    font-size: 11px;
+  }
+
+  .checkbox-container,
+  .delete-button-container {
+    padding-top: 0;
   }
 }
 
